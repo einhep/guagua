@@ -5,10 +5,15 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class = "output reader-font2 fluid zh cn win reader-day-mode reader-font2">
+  <%= render 'layouts/first' %>
+  <div class = "row-fluid">
+    <div class = "recommended">
+      <%= render 'layouts/second' %>
+      <%= render 'layouts/third' %>
+    </div>
+  </div>
 </body>
 </html>
